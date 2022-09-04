@@ -1,0 +1,11 @@
+ul{
+  list-style-type: none;
+}
+li{
+  float: left;
+  list-style-type: none;
+  width: 100px;
+}
+a{
+  list-style-position: none;
+}

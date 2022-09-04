@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="search">
+    <div class="isearch">
+    <label>Search Product</label>
+    <input class="form-control" type="text" name="search" [(ngModel)]= "searchText" >
+    </div>
+  </div>
+  <table class="table table-dark">
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>img</td>
+    </tr>
+    <tr *ngFor="let product of products | filter: searchText" >
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td><img src="{{product.img}}" [alt]="product.name"></td>
+      <td class="remove"><button (click) = 'Remove(product.id)'>Xóa</button> </td>
+    </tr>
+  </table>
+  <app-footer></app-footer>
+</div>
